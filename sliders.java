@@ -10,15 +10,14 @@ import javafx.scene.layout.GridPane;
 import javafx.scene.control.Label;
 import javafx.geometry.Pos;
 import javafx.geometry.Insets;
-
-public class sliders extends Application {
+//makes the class
+public class sliders extends Application{
 	protected Text color_display = new Text("Color display");
 	protected Slider opacity_slider = new Slider();
 	protected Slider green_slider = new Slider();
 	protected Slider blue_slider = new Slider();
 	protected Slider red_slider = new Slider();
-	
-	
+	//start of the functions
 	@Override
 	public void start(Stage primaryStage){
 		StackPane text_area = new StackPane(color_display);
@@ -56,6 +55,7 @@ public class sliders extends Application {
 		primaryStage.setScene(scene);
 		primaryStage.show();
 	}
+	//sets the color
 	private void color_setter() {
 		color_display.setFill(new Color(red_slider.getValue(), green_slider.getValue(), blue_slider.getValue(), opacity_slider.getValue()));
 	}
